@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="1.6" client="site" method="upgrade">
+	<name>Bootstrap Carousel - by Morris Projects</name>
+	<author>Morris Projects Ltd</author>
+	<creationDate>Feb 2015</creationDate>
+	<copyright>Copyright (C) 2015 Morris Projects Ltd</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>sales@morrisprojects.com</authorEmail>
+	<authorURL>http://morrisprojects.com</authorURL>
+	<version>1.0</version>
+	<description>A Joomla! Bootstrap responsive image slider module. Multiple configuration options. This is typically implemented with the Morris Projects Base Template, which uses Bootstrap 3.3.2 (current version at time of development).</description>
+	
+	<files>
+		<filename>mod_mpbase_bootcarousel.xml</filename>
+		<filename module="mod_mpbase_bootcarousel">mod_mpbase_bootcarousel.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="carousel_container" type="radio" default="1" label="Show in Container" description="Decides if the carousel should be should in a container div or not. Full width or not.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="carousel_id" type="text" default="boot_carousel" label="Carousel ID" description="Give the Caoursel a specific CSS ID. Useful for styling. This field is required so that the links for the carousel work." class="required"/>
+				<field type="spacer" name="myspacer" hr="true" />
+
+				<field name="directionNav" type="radio" default="1" label="Use directional nav?" description="Turn on or off left/right buttons">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="controlNav" type="radio" default="1" label="Use control nav?" description="Turn on or off underside control blobs">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				
+				<field name="slidespeed" type="text" default="5000" label="Slide Interval Time" description="The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle. (in ms)"/>
+
+			</fieldset>
+			
+			<fieldset name="images" label="Images">
+				<field name="image1" type="media" directory="stories" label="Image 1"/>
+				<field name="image1alt" type="text" default="" label="Alt tag" description="Image Alt Text"/>
+				<field name="image1id" type="text" default="" label="Item CSS ID" description="Carousel Item ID, useful for styling in CSS"/>
+				<field name="image1header" type="text" default="" label="Image 1 Header Text" description="Header label for Image 1" filter="raw"/>
+				<field name="image1cap" type="textarea" default="" label="Image 1 Caption Text" description="Caption for first image" filter="raw"/>
+				<field name="image1btntext" type="text" default="" label="Image 1 Button Text" description="Image 1 button text" filter="raw"/>
+				<field name="image1linktype" type="radio" default="0" label="Link Type" description="Options for the link type. Link for the button only, or the image in the carousel item or no link at all.">
+					<option value="0">Button</option>
+					<option value="1">Image Link (No Button Shown)</option>
+					<option value="2">No Link</option>
+				</field>
+				<field name="image1link" type="menuitem" default="" label="Image 1 Link" description="Link for first slide"/>
+				<field name="image1customlink" type="text" default="" label="OR Image 1 Custom Link" description="Custom link for Image 1. This will override the image link for menu item above."/>
+				
+				<field type="spacer" name="myspacer" hr="true" />
+				
+				<field name="image2" type="media" directory="stories" label="Image 2"/>
+				<field name="image2alt" type="text" default="" label="Alt tag" description="Image Alt Text"/>
+				<field name="image2id" type="text" default="" label="Item CSS ID" description="Carousel Item ID, useful for styling in CSS"/>
+				<field name="image2header" type="text" default="" label="Image 2 Header Text" description="Header label for Image 2" filter="raw"/>
+				<field name="image2cap" type="textarea" default="" label="Image 2 Caption Text" description="Caption for first image" filter="raw"/>
+				<field name="image2btntext" type="text" default="" label="Image 2 Button Text" description="Image 2 button text" filter="raw"/>
+				<field name="image2linktype" type="radio" default="0" label="Link Type" description="Options for the link type. Link for the button only, or the image in the carousel item or no link at all.">
+					<option value="0">Button</option>
+					<option value="1">Image Link (No Button Shown)</option>
+					<option value="2">No Link</option>
+				</field>
+				<field name="image2link" type="menuitem" default="" label="Image 2 Link" description="Link for first slide"/>
+				<field name="image2customlink" type="text" default="" label="OR Image 2 Custom Link" description="Custom link for Image 2. This will override the image link for menu item above."/>
+
+				<field type="spacer" name="myspacer2" hr="true" />
+
+				<field name="image3" type="media" directory="stories" label="Image 3"/>
+				<field name="image3alt" type="text" default="" label="Alt tag" description="Image Alt Text"/>
+				<field name="image3id" type="text" default="" label="Item CSS ID" description="Carousel Item ID, useful for styling in CSS"/>
+				<field name="image3header" type="text" default="" label="Image 3 Header Text" description="Header label for Image 3" filter="raw"/>
+				<field name="image3cap" type="textarea" default="" label="Image 3 Caption Text" description="Caption for first image" filter="raw"/>
+				<field name="image3btntext" type="text" default="" label="Image 3 Button Text" description="Image 3 button text" filter="raw"/>
+				<field name="image3linktype" type="radio" default="0" label="Link Type" description="Options for the link type. Link for the button only, or the image in the carousel item or no link at all.">
+					<option value="0">Button</option>
+					<option value="1">Image Link (No Button Shown)</option>
+					<option value="2">No Link</option>
+				</field>
+				<field name="image3link" type="menuitem" default="" label="Image 3 Link" description="Link for first slide"/>
+				<field name="image3customlink" type="text" default="" label="OR Image 3 Custom Link" description="Custom link for Image 3. This will override the image link for menu item above."/>
+
+				<field type="spacer" name="myspacer3" hr="true" />
+
+				<field name="image4" type="media" directory="stories" label="Image 4"/>
+				<field name="image4alt" type="text" default="" label="Alt tag" description="Image Alt Text"/>
+				<field name="image4id" type="text" default="" label="Item CSS ID" description="Carousel Item ID, useful for styling in CSS"/>
+				<field name="image4header" type="text" default="" label="Image 4 Header Text" description="Header label for Image 4" filter="raw"/>
+				<field name="image4cap" type="textarea" default="" label="Image 4 Caption Text" description="Caption for first image" filter="raw"/>
+				<field name="image4btntext" type="text" default="" label="Image 4 Button Text" description="Image 4 button text" filter="raw"/>
+				<field name="image4linktype" type="radio" default="0" label="Link Type" description="Options for the link type. Link for the button only, or the image in the carousel item or no link at all.">
+					<option value="0">Button</option>
+					<option value="1">Image Link (No Button Shown)</option>
+					<option value="2">No Link</option>
+				</field>
+				<field name="image4link" type="menuitem" default="" label="Image 4 Link" description="Link for first slide"/>
+				<field name="image4customlink" type="text" default="" label="OR Image 4 Custom Link" description="Custom link for Image 4. This will override the image link for menu item above."/>
+
+				<field type="spacer" name="myspacer4" hr="true" />
+
+				<field name="image5" type="media" directory="stories" label="Image 5"/>
+				<field name="image5alt" type="text" default="" label="Alt tag" description="Image Alt Text"/>
+				<field name="image5id" type="text" default="" label="Item CSS ID" description="Carousel Item ID, useful for styling in CSS"/>
+				<field name="image5header" type="text" default="" label="Image 5 Header Text" description="Header label for Image 5" filter="raw"/>
+				<field name="image5cap" type="textarea" default="" label="Image 5 Caption Text" description="Caption for first image" filter="raw"/>
+				<field name="image5btntext" type="text" default="" label="Image 5 Button Text" description="Image 5 button text" filter="raw"/>
+				<field name="image5linktype" type="radio" default="0" label="Link Type" description="Options for the link type. Link for the button only, or the image in the carousel item or no link at all.">
+					<option value="0">Button</option>
+					<option value="1">Image Link (No Button Shown)</option>
+					<option value="2">No Link</option>
+				</field>
+				<field name="image5link" type="menuitem" default="" label="Image 5 Link" description="Link for first slide"/>
+				<field name="image5customlink" type="text" default="" label="OR Image 5 Custom Link" description="Custom link for Image 5. This will override the image link for menu item above."/>
+
+				<field type="spacer" name="myspacer5" hr="true" />
+
+				<field name="image6" type="media" directory="stories" label="Image 6"/>
+				<field name="image6alt" type="text" default="" label="Alt tag" description="Image Alt Text"/>
+				<field name="image6id" type="text" default="" label="Item CSS ID" description="Carousel Item ID, useful for styling in CSS"/>
+				<field name="image6header" type="text" default="" label="Image 6 Header Text" description="Header label for Image 6" filter="raw"/>
+				<field name="image6cap" type="textarea" default="" label="Image 6 Caption Text" description="Caption for first image" filter="raw"/>
+				<field name="image6btntext" type="text" default="" label="Image 6 Button Text" description="Image 6 button text" filter="raw"/>
+				<field name="image6linktype" type="radio" default="0" label="Link Type" description="Options for the link type. Link for the button only, or the image in the carousel item or no link at all.">
+					<option value="0">Button</option>
+					<option value="1">Image Link (No Button Shown)</option>
+					<option value="2">No Link</option>
+				</field>
+				<field name="image6link" type="menuitem" default="" label="Image 6 Link" description="Link for first slide"/>
+				<field name="image6customlink" type="text" default="" label="OR Image 6 Custom Link" description="Custom link for Image 6. This will override the image link for menu item above."/>
+
+				<field type="spacer" name="myspacer6" hr="true" />
+
+				<field name="image7" type="media" directory="stories" label="Image 7"/>
+				<field name="image7alt" type="text" default="" label="Alt tag" description="Image Alt Text"/>
+				<field name="image7id" type="text" default="" label="Item CSS ID" description="Carousel Item ID, useful for styling in CSS"/>
+				<field name="image7header" type="text" default="" label="Image 7 Header Text" description="Header label for Image 7" filter="raw"/>
+				<field name="image7cap" type="textarea" default="" label="Image 7 Caption Text" description="Caption for first image" filter="raw"/>
+				<field name="image7btntext" type="text" default="" label="Image 7 Button Text" description="Image 7 button text" filter="raw"/>
+				<field name="image7linktype" type="radio" default="0" label="Link Type" description="Options for the link type. Link for the button only, or the image in the carousel item or no link at all.">
+					<option value="0">Button</option>
+					<option value="1">Image Link (No Button Shown)</option>
+					<option value="2">No Link</option>
+				</field>
+				<field name="image7link" type="menuitem" default="" label="Image 7 Link" description="Link for first slide"/>
+				<field name="image7customlink" type="text" default="" label="OR Image 7 Custom Link" description="Custom link for Image 7. This will override the image link for menu item above."/>
+
+				<field type="spacer" name="myspacer7" hr="true" />
+
+				<field name="image8" type="media" directory="stories" label="Image 8"/>
+				<field name="image8alt" type="text" default="" label="Alt tag" description="Image Alt Text"/>
+				<field name="image8id" type="text" default="" label="Item CSS ID" description="Carousel Item ID, useful for styling in CSS"/>
+				<field name="image8header" type="text" default="" label="Image 8 Header Text" description="Header label for Image 8" filter="raw"/>
+				<field name="image8cap" type="textarea" default="" label="Image 8 Caption Text" description="Caption for first image" filter="raw"/>
+				<field name="image8btntext" type="text" default="" label="Image 8 Button Text" description="Image 8 button text" filter="raw"/>
+				<field name="image8linktype" type="radio" default="0" label="Link Type" description="Options for the link type. Link for the button only, or the image in the carousel item or no link at all.">
+					<option value="0">Button</option>
+					<option value="1">Image Link (No Button Shown)</option>
+					<option value="2">No Link</option>
+				</field>
+				<field name="image8link" type="menuitem" default="" label="Image 8 Link" description="Link for first slide"/>
+				<field name="image8customlink" type="text" default="" label="OR Image 8 Custom Link" description="Custom link for Image 8. This will override the image link for menu item above."/>
+
+				<field type="spacer" name="myspacer8" hr="true" />
+
+				<field name="image9" type="media" directory="stories" label="Image 9"/>
+				<field name="image9alt" type="text" default="" label="Alt tag" description="Image Alt Text"/>
+				<field name="image9id" type="text" default="" label="Item CSS ID" description="Carousel Item ID, useful for styling in CSS"/>
+				<field name="image9header" type="text" default="" label="Image 9 Header Text" description="Header label for Image 9" filter="raw"/>
+				<field name="image9cap" type="textarea" default="" label="Image 9 Caption Text" description="Caption for first image" filter="raw"/>
+				<field name="image9btntext" type="text" default="" label="Image 9 Button Text" description="Image 9 button text" filter="raw"/>
+				<field name="image9linktype" type="radio" default="0" label="Link Type" description="Options for the link type. Link for the button only, or the image in the carousel item or no link at all.">
+					<option value="0">Button</option>
+					<option value="1">Image Link (No Button Shown)</option>
+					<option value="2">No Link</option>
+				</field>
+				<field name="image9link" type="menuitem" default="" label="Image 9 Link" description="Link for first slide"/>
+				<field name="image9customlink" type="text" default="" label="OR Image 9 Custom Link" description="Custom link for Image 9. This will override the image link for menu item above."/>
+
+				<field type="spacer" name="myspacer9" hr="true" />
+
+				<field name="image10" type="media" directory="stories" label="Image 10"/>
+				<field name="image10alt" type="text" default="" label="Alt tag" description="Image Alt Text"/>
+				<field name="image10id" type="text" default="" label="Item CSS ID" description="Carousel Item ID, useful for styling in CSS"/>
+				<field name="image10header" type="text" default="" label="Image 10 Header Text" description="Header label for Image 10" filter="raw"/>
+				<field name="image10cap" type="textarea" default="" label="Image 10 Caption Text" description="Caption for first image" filter="raw"/>
+				<field name="image10btntext" type="text" default="" label="Image 10 Button Text" description="Image 10 button text" filter="raw"/>
+				<field name="image10linktype" type="radio" default="0" label="Link Type" description="Options for the link type. Link for the button only, or the image in the carousel item or no link at all.">
+					<option value="0">Button</option>
+					<option value="1">Image Link (No Button Shown)</option>
+					<option value="2">No Link</option>
+				</field>
+				<field name="image10link" type="menuitem" default="" label="Image 10 Link" description="Link for first slide"/>
+				<field name="image10customlink" type="text" default="" label="OR Image 10 Custom Link" description="Custom link for Image 10. This will override the image link for menu item above."/>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
