@@ -5,22 +5,22 @@
 defined('_JEXEC') or die;
 
 class mod_mpbase_bootcarouselHelper{
-	
-	public function getImages(&$params){
-		
-		$imgsAndCaps = array(); 
+
+	public static function getImages(&$params){
+
+		$imgsAndCaps = array();
 		
 		$i = 1;
-		
+
 		while($i < 11): // Total 10 images
-		
+
 		$menuvalue = $params->get("image".$i."link");
-		
+
 		$database = JFactory::getDBO();
 		$sql = "SELECT link FROM #__menu WHERE id = ".$menuvalue;
 		$database->setQuery( $sql );
 		$menuItem=$database->loadResult();
-		
+
 		$link = JRoute::_($menuItem.'&Itemid='.$menuvalue);
 
 		if(($params->get('image'.$i.'linktype') == 0) && ($params->get('image'.$i))) { // Button Link Type
@@ -101,13 +101,13 @@ class mod_mpbase_bootcarouselHelper{
 				array_push($imgsAndCaps, $listitem);
 			}
 		}
-		
+
 		$i++;
-		
+
 		endwhile;
-		
+
 		return $imgsAndCaps;
-		
+
 	}
-	
-}		
+
+}
