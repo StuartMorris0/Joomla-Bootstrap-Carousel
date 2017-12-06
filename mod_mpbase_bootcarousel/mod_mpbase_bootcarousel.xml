@@ -27,6 +27,7 @@
 					<option value="0">No</option>
 				</field>
 				<field name="carousel_id" type="text" default="boot_carousel" label="Carousel ID" description="Give the Caoursel a specific CSS ID. Useful for styling. This field is required so that the links for the carousel work." class="required"/>
+				<field name="carousel_class" type="text" default="" label="Carousel class" description="A custom CSS class to add to the Caoursel. Useful for applying a generic style to multiple instances of the Carousel." />
 				<field type="spacer" name="myspacer" hr="true" />
 
 				<field name="directionNav" type="radio" default="1" label="Use directional nav?" description="Turn on or off left/right buttons">

@@ -15,6 +15,9 @@ Controls if the carousel is displayed in a Bootstrap container... `<div class="c
 ###### Carousel ID
 Add a specific CSS ID to the carousel to help with styling. This is also required for the directional arrows/tabs to work in the carousel.
 
+###### Carousel class
+Add a specific CSS class to the carousel to help with styling.
+
 ###### Use Directional Nav?
 Switch on and off the default arrows for the carousel.
 

@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
     <div class="container">
 <?php endif;?>
 
-<div <?php if ($params->get('carousel_id') != ''): ?>id="<?php echo $params->get('carousel_id')?>"<?php endif;?> class="carousel slide" data-ride="carousel">
+<div <?php if ($params->get('carousel_id') != ''): ?>id="<?php echo $params->get('carousel_id')?>"<?php endif;?> class="carousel slide <?php echo $params->get('carousel_class')?>" data-ride="carousel">
   
   <!-- Indicators -->
   <?php if ($params->get('controlNav') == 1): ?>
